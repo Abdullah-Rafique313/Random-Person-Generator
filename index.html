@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="top">
+            <h1>people.</h1>
+
+            <div class="controls">
+                <div class="seg" id="seg">
+                    <button class="on" data-g="male">Men</button>
+                    <button data-g="female">Women</button>
+                    <button data-g="">Any</button>
+                </div>
+
+                <select id="nat">
+                    <option value="">Any country</option>
+                    <option value="in">India</option>
+                    <option value="us">USA</option>
+                    <option value="gb">UK</option>
+                    <option value="au">Australia</option>
+                    <option value="ca">Canada</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                </select>
+            </div>
+        </header>
+
+        <div id="body">
+            <section class="hero">
+                <span id="counter">No. 00</span>
+                <h2 data-f="fullName">Loading</h2>
+                <p><span data-f="gender"></span> &middot; <span data-f="age"></span> years old</p>
+            </section>
+
+            <section class="grid">
+                <div class="item"><dt>Date of birth</dt><dd data-f="dob"></dd></div>
+                <div class="item"><dt>Phone number</dt><dd data-f="phone"></dd></div>
+                <div class="item"><dt>ID</dt><dd data-f="id"></dd></div>
+                <div class="item"><dt>Country</dt><dd data-f="country"></dd></div>
+                <div class="item"><dt>City</dt><dd data-f="city"></dd></div>
+                <div class="item"><dt>Gender</dt><dd data-f="gender"></dd></div>
+                <div class="item wide"><dt>Full address</dt><dd data-f="address"></dd></div>
+            </section>
+
+            <section class="login">
+                <div class="login-head">
+                    <h3>Login details</h3>
+                    <span>Use these to sign in</span>
+                </div>
+                <div class="pair">
+                    <div>
+                        <small>Username</small>
+                        <strong data-f="username"></strong>
+                    </div>
+                    <div>
+                        <small>Password</small>
+                        <strong data-f="password"></strong>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="history">
+            <span>Recent</span>
+            <div id="recent"></div>
+        </div>
+
+        <div class="actions">
+            <button id="generate">Generate new</button>
+            <button id="copy" class="ghost">Copy JSON</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
